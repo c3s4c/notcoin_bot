@@ -454,7 +454,7 @@ class Farming:
                                 random_sleep_time: int = randint(a=config.SLEEP_BEFORE_ACTIVATE_TURBO[0],
                                                                  b=config.SLEEP_BEFORE_ACTIVATE_TURBO[1])
 
-                                logger.info(f'{self.session_name} | I'm sleeping {random_sleep_time} before activation '
+                                logger.info(f'{self.session_name} | sleep {random_sleep_time} before activation '
                                             f'Turbo')
 
                                 await asyncio.sleep(delay=random_sleep_time)
@@ -604,14 +604,14 @@ class Farming:
                             random_sleep_time: int = randint(a=config.SLEEP_BETWEEN_CLICK[0],
                                                              b=config.SLEEP_BETWEEN_CLICK[1])
 
-                            logger.info(f'{self.session_name} | Сплю {random_sleep_time} сек.')
+                            logger.info(f'{self.session_name} | sleep {random_sleep_time} sec.')
                             await asyncio.sleep(delay=random_sleep_time)
 
                         else:
                             random_sleep_time: int = randint(a=config.SLEEP_BETWEEN_CLICK[0],
                                                              b=config.SLEEP_BETWEEN_CLICK[1])
 
-                            logger.info(f'{self.session_name} | Сплю {random_sleep_time} сек.')
+                            logger.info(f'{self.session_name} | sleep {random_sleep_time} sec.')
                             await asyncio.sleep(delay=random_sleep_time)
 
             except InvalidSession as error:
