@@ -27,7 +27,7 @@ async def main() -> None:
         case 1:
             await create_sessions()
 
-            logger.success('Сессии успешно добавлены')
+            logger.success('Sessions added successfully')
 
         case 2:
             tasks: list = [
@@ -39,7 +39,7 @@ async def main() -> None:
             await asyncio.gather(*tasks)
 
         case _:
-            logger.error('Действие выбрано некорректно')
+            logger.error('Action selected incorrectly')
 
 
 if __name__ == '__main__':
@@ -61,11 +61,11 @@ if __name__ == '__main__':
                                 else current_file for current_file in listdir(path='sessions')
                                 if current_file.endswith('.session') or isdir(s=f'sessions/{current_file}')]
 
-    logger.info(f'Обнаружено {len(session_files)} сессий / {len(proxies)} прокси')
+    logger.info(f'Discovered {len(session_files)} sessions / {len(proxies)} proxy')
 
-    user_action: int = int(input('\n1. Создать сессию'
-                                 '\n2. Запустить бота с существующих сессий'
-                                 '\nВыберите ваше действие: '))
+    user_action: int = int(input('\n1. Create a session'
+                                 '\n2. Launch the bot from existing sessions'
+                                 '\nSelect your action:'))
     print()
 
     try:
