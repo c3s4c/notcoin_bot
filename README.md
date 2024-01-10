@@ -1,4 +1,6 @@
-# Translated into English
+# Fork changes
++ Translated into English
++ Optimized
  
 ### Functional
 + _Multithreading_
